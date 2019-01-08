@@ -23,5 +23,5 @@ def result():
             get_photo.google_obj.download(get_photo.options)
             return render_template("result.html", search_word=search_word, get_pages=get_pages, error=None, desktop_path=desktop_path)
         except:
-            return render_template("result.html", search_word=None, get_pages=None, error="エラーが発生しました")
+            return render_template("result.html", search_word=None, get_pages=None, error="エラーが発生しました", desktop_path=desktop_path)
     return redirect(url_for('index'))
