@@ -5,6 +5,9 @@ from google_images_download import google_images_download
 import os
 #亮介の足跡
 
+def show_image(path):
+
+
 @app.route("/", methods=["GET"])
 def index():
     return render_template("index.html")
@@ -17,9 +20,7 @@ def result():
             get_pages = request.form["get-pages"]
             get_photo.options["keywords"] = search_word
             get_photo.options["limit"] = int(get_pages)
-            #desktop_path = os.getenv("HOMEDRIVE") + os.getenv("HOMEPATH") + "/Desktop"
-            #desktop_path = "C:/"+os.environ.get("USER")+"/Desktop"
-            image_path = "C:\\User\\Desktop"
+            desktop_path = os.getenv("HOMEDRIVE") + os.getenv("HOMEPATH") + "/Desktop"
             get_photo.options["output_directory"] = image_path
             get_photo.google_obj.download(get_photo.options)
             return render_template("result.html", search_word=search_word, get_pages=get_pages, error=None, image_path=image_path)
