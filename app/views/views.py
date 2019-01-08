@@ -19,10 +19,10 @@ def result():
             get_photo.options["limit"] = int(get_pages)
             #desktop_path = os.getenv("HOMEDRIVE") + os.getenv("HOMEPATH") + "/Desktop"
             #desktop_path = "C:/"+os.environ.get("USER")+"/Desktop"
-            desktop_path = os.path.expanduser("~") + "/Desktop"
-            get_photo.options["output_directory"] = desktop_path
+            image_path = "C:\\User\\Desktop"
+            get_photo.options["output_directory"] = image_path
             get_photo.google_obj.download(get_photo.options)
-            return render_template("result.html", search_word=search_word, get_pages=get_pages, error=None, desktop_path=desktop_path)
+            return render_template("result.html", search_word=search_word, get_pages=get_pages, error=None, image_path=image_path)
         except:
-            return render_template("result.html", search_word=None, get_pages=None, error="エラーが発生しました", desktop_path=desktop_path)
+            return render_template("result.html", search_word=None, get_pages=None, error="エラーが発生しました")
     return redirect(url_for('index'))
