@@ -27,7 +27,7 @@
       </div>
       <div id="result-area">
         {% if not error %}
-          <p id="result-word">保存が完了しました</p>
+          <p id="result-word">{{ desktop_path }}に保存が完了しました</p>
           <p>検索ワード: {{ search_word }}</p>
           <p>取得 画像数: {{ get_pages }}</p>
         {% else %}
