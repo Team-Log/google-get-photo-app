@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+body{
+  background-image: url("../images/main-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.wrapper{
+  width: 960px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.main-area{
+  margin-top: 30px;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+#title{
+  width: 800px;
+  margin: 10px auto;
+}
+#title a{
+  text-decoration: none;
+  color: blue;
+}
+#title a:link,
+#title a:visited,
+#title a:hover,
+#title a:active,
+#title a:focus{
+  color: blue;
+}
+
+#description{
+  width: 800px;
+  margin: 10px auto;
+}
+.desc-text{
+  box-sizing: border-box;
+  width: 600px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+.text{
+  display: block;
+  text-align: left;
+}
+
+#input-area{
+  width: 800px;
+  margin: 70px auto;
+}
+#input-form{
+  padding: 10px;
+  background-color: rgba(30, 50, 60, 0.5);
+  border-radius: 30px;
+}
+
+#search-word{
+  margin-left: 150px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#get-pages{
+  margin-left: 150px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#search-word-area{
+  width: 350px;
+  height: 30px;
+}
+#get-pages-area{
+  width: 100px;
+  height: 30px;
+}
+
+#input-form .text-area{
+  text-align: left;
+}
+#input-form .button-area{
+  text-align: center;
+}
+
+#submit-button{
+  width: 120px;
+  height: 40px;
+  font-size: 25px;
+}
+
+#result-area{
+  width: 800px;
+  margin: 70px auto;
+}
+
+#result-word{
+  font-size: 30px;
+  font-weight: bold;
+}
