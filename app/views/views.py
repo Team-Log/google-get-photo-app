@@ -21,7 +21,7 @@ def result():
             desktop_path = os.path.expanduser("~") + "/Desktop"
             get_photo.options["output_directory"] = desktop_path
             get_photo.google_obj.download(get_photo.options)
-            return render_template("result.html", search_word=search_word, get_pages=get_pages, error=None)
+            return render_template("result.html", search_word=search_word, get_pages=get_pages, error=None, desktop_path=desktop_path)
         except:
             return render_template("result.html", search_word=None, get_pages=None, error="エラーが発生しました")
     return redirect(url_for('index'))
