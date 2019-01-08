@@ -17,8 +17,8 @@ def result():
             get_pages = request.form["get-pages"]
             get_photo.options["keywords"] = search_word
             get_photo.options["limit"] = int(get_pages)
-            desktop_path = os.getenv("HOMEDRIVE") + os.getenv("HOMEPATH") + "/Desktop"
-            #desktop_path = os.path.expanduser("~") + "/Desktop"
+            #desktop_path = os.getenv("HOMEDRIVE") + os.getenv("HOMEPATH") + "/Desktop"
+            desktop_path = "C:/"+os.environ.get("USER")+"/Desktop"
             get_photo.options["output_directory"] = desktop_path
             get_photo.google_obj.download(get_photo.options)
             return render_template("result.html", search_word=search_word, get_pages=get_pages, error=None, desktop_path=desktop_path)
