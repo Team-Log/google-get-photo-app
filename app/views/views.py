@@ -5,9 +5,6 @@ from google_images_download import google_images_download
 import os
 #亮介の足跡
 
-def show_image(path):
-
-
 @app.route("/", methods=["GET"])
 def index():
     return render_template("index.html")
